@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Slider from './atoms/slide/Slider';
 
 function MainPage() {
 
@@ -13,7 +14,7 @@ function MainPage() {
             <StyledLi>약국위치</StyledLi>
         </StyleUl>
     </StyledDiv>
-    <StyledDiv2></StyledDiv2>
+    <StyledDiv2><Slider></Slider></StyledDiv2>
     <StyledDIv3>
         <StyledDIv4></StyledDIv4>
         <StyledDIv5></StyledDIv5>
@@ -21,6 +22,8 @@ function MainPage() {
     </>
   )
 }
+
+
 
 const StyleP = styled.p`
     text-align: center;
@@ -55,7 +58,6 @@ const StyledDiv = styled.div`
 const StyledDiv2 = styled.div`
     width: 80%;
     height: 300px;
-    background-color: deepskyblue;
     margin-left: 10%;
     margin-top: 2%;
 `;
