@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Slider from './atoms/slide/Slider';
+import youtube from 'react-youtube';
+import YouTube from 'react-youtube';
 
 function MainPage() {
 
@@ -17,7 +19,16 @@ function MainPage() {
     <StyledDiv2><Slider></Slider></StyledDiv2>
     <StyledDIv3>
         <StyledDIv4></StyledDIv4>
-        <StyledDIv5></StyledDIv5>
+        {/* <Vedio></Vedio> */}
+        <StyledDIv5><YouTube videoId='vedio.BL92R8LgX8ZHvPh5'
+          opts={{
+            playerVars: {
+              autoplay: 1,
+              rel: 0,
+              modestbranding: 1,
+            },
+          }}
+          onEnd={(e)=>{e.target.stopVideo(0);}}></YouTube></StyledDIv5>
     </StyledDIv3>
     </>
   )
@@ -82,6 +93,13 @@ height: 250px;
 background-color: blue;
 margin-left: 2%;
 `;
+
+// const Vedio = styled.iframe`
+// width: 49%;
+// height: 250px;
+// background-color: blue;
+// margin-left: 2%;
+// `;
 
 
 export default MainPage
