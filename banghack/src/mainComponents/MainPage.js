@@ -4,6 +4,9 @@ import Slider from './atoms/slide/Slider';
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Newslist from './atoms/List/news_list'
+import youtube from 'react-youtube';
+import YouTube from 'react-youtube';
+
 
 function MainPage() {
     const [Data, setData] = useState([]);
@@ -34,6 +37,18 @@ function MainPage() {
     <StyledDIv3>
         <Newslist data={Data}></Newslist>
         <StyledDIv5></StyledDIv5>
+        <StyledDIv4></StyledDIv4>
+        {/* <Vedio></Vedio> */}
+        <StyledDIv5><YouTube videoId='vedio.BL92R8LgX8ZHvPh5'
+          opts={{
+            playerVars: {
+              autoplay: 1,
+              rel: 0,
+              modestbranding: 1,
+            },
+          }}
+          onEnd={(e)=>{e.target.stopVideo(0);}}></YouTube></StyledDIv5>
+
     </StyledDIv3>
     </>
   )
@@ -102,6 +117,13 @@ height: 250px;
 background-color: blue;
 margin-left: 2%;
 `;
+
+// const Vedio = styled.iframe`
+// width: 49%;
+// height: 250px;
+// background-color: blue;
+// margin-left: 2%;
+// `;
 
 
 export default MainPage
