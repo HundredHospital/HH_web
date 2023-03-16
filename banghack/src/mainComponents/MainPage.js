@@ -20,15 +20,16 @@ function MainPage() {
     <StyledDIv3>
         <StyledDIv4></StyledDIv4>
         {/* <Vedio></Vedio> */}
-        <StyledDIv5><YouTube videoId='vedio.BL92R8LgX8ZHvPh5'
-          opts={{
-            playerVars: {
-              autoplay: 1,
-              rel: 0,
-              modestbranding: 1,
-            },
-          }}
-          onEnd={(e)=>{e.target.stopVideo(0);}}></YouTube></StyledDIv5>
+        <StyledDIv5><YouTube videoId='T5ZxYnQ_ATg'
+            opts={{
+                playerVars: {
+                    rel: 0,
+                    modestbranding: 1,
+                    controls: 0,
+                    disablekb: 1,
+                    },
+                }}
+            onEnd={(e)=>{e.target.stopVideo(0);}}></YouTube></StyledDIv5>
     </StyledDIv3>
     </>
   )
