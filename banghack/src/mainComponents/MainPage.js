@@ -119,7 +119,8 @@ height: 250px;
 const StyledDIv5 = styled.div`
 width: 24%;
 height: 250px;
-margin-left: 2%;
+margin-left: 8%;
+margin-top: 1%;
 `;
 
 
