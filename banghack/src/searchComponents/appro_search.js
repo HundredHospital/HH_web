@@ -37,17 +37,21 @@ const ListView = () => {
             <StyledLi>약국위치</StyledLi>
         </StyleUl>
     </StyledDiv>
+    <div>
+    <h1>약품검색</h1>
       <input className="input" type="text" defaultValue={search} onKeyDown={onChange} />
-      <a href="/newsSearch" style={styleBtn}>뉴스검색</a>
       <div className="App">
         {filterTitle &&
           filterTitle.map((med, index) => (
             <div key={index} style={styleSpan}>
+              <img src={med.img}></img>
               <span>{med.name}</span><br/>
               <span>{med.use}</span><br/>
               <span>{med.amount}</span>
+              <hr></hr>
             </div>
           ))}
+      </div>
       </div>
     </>
   );

@@ -6,8 +6,8 @@ function Newslist(props) {
     const Data = props.data
     const liList = Data.map((news, index) => {
         if(index < 6){
-            return (<li key={index} style={styleLi}>
-            <p style={styleSpan}>{news.title}</p><hr></hr>
+            return (<li key={index} style={styleLi}><StyleA href={news.link}>
+            <p style={styleSpan}>{news.title}</p></StyleA><hr></hr>
             </li>)
         }
     })
@@ -45,5 +45,10 @@ const StyledDIv4 = styled.div`
 width: 49%;
 height: 250px;  
 `;
+
+const StyleA = styled.a`
+  color: black;
+  fontStyle: none;
+  textDecorationLine: none;`;
 
 export default Newslist;

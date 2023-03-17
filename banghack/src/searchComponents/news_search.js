@@ -37,6 +37,7 @@ const NewsSearch = () => {
           <span>{news.link}</span><br/>
           <span>{news.date}</span>
           </StyleA>
+          <hr></hr>
         </div>
       )
     })
@@ -46,14 +47,14 @@ const NewsSearch = () => {
     <StyledDiv>
         <StyleUl>
             <StyleP><StyleA href='/'>Hundred Hospital</StyleA></StyleP>
-            <StyledLi><a href='/approSearch'>제품목록</a></StyledLi>
-            <StyledLi><a href='/newsSearch'>뉴스</a></StyledLi>
+            <StyledLi><StyleA href='/approSearch'>제품목록</StyleA></StyledLi>
+            <StyledLi><StyleA href='/newsSearch'>뉴스</StyleA></StyledLi>
             <StyledLi>영상</StyledLi>
             <StyledLi>약국위치</StyledLi>
         </StyleUl>
     </StyledDiv>
+    <h1>뉴스검색</h1>
       <input className="input" type="text" defaultValue={search} onKeyDown={onChange} />
-      <a href="/" style={styleBtn}>약품검색</a>
       <div className="App">
         {filterTitle}
       </div>

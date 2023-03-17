@@ -36,9 +36,6 @@ function MainPage() {
     <StyledDiv2><Slider></Slider></StyledDiv2>
     <StyledDIv3>
         <Newslist data={Data}></Newslist>
-        <StyledDIv5></StyledDIv5>
-        <StyledDIv4></StyledDIv4>
-        {/* <Vedio></Vedio> */}
         <StyledDIv5><YouTube videoId='T5ZxYnQ_ATg'
             opts={{
                 playerVars: {
@@ -49,7 +46,7 @@ function MainPage() {
                     },
                 }}
             onEnd={(e)=>{e.target.stopVideo(0);}}></YouTube></StyledDIv5>
-        <StyledDIv5><YouTube videoId='vedio.BL92R8LgX8ZHvPh5'
+        {/* <StyledDIv5><YouTube videoId='vedio.BL92R8LgX8ZHvPh5'
           opts={{
             playerVars: {
               autoplay: 1,
@@ -57,7 +54,7 @@ function MainPage() {
               modestbranding: 1,
             },
           }}
-          onEnd={(e)=>{e.target.stopVideo(0);}}></YouTube></StyledDIv5>
+          onEnd={(e)=>{e.target.stopVideo(0);}}></YouTube></StyledDIv5> */}
     </StyledDIv3>
     </>
   )
@@ -116,23 +113,14 @@ display: flex;
 const StyledDIv4 = styled.div`
 width: 49%;
 height: 250px;
-background-color: navy;
 `;
 
 
 const StyledDIv5 = styled.div`
-width: 49%;
+width: 24%;
 height: 250px;
-background-color: blue;
 margin-left: 2%;
 `;
-
-// const Vedio = styled.iframe`
-// width: 49%;
-// height: 250px;
-// background-color: blue;
-// margin-left: 2%;
-// `;
 
 
 export default MainPage
